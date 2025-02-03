@@ -6,6 +6,20 @@ document.getElementById("weatherForm").addEventListener("submit", function(event
 });
 
     const apiKey = "e8a9678acd9ff7870365ce4896c318df";
+    let isCelsius = true;
+
+    document.getElementById('temperature').addEventListener('click', function () {
+        if (isCelsius) {
+            let tempCelsius = parseFloat(this.textContent);
+            let tempKelvin = tempCelsius + 273.15;
+            this.textContent = `${tempKelvin.toFixed(2)}K`;
+        } else {
+            let tempKelvin = parseFloat(this.textContent);
+            let tempCelsius = tempKelvin - 273.15;
+            this.textContent = `${tempCelsius.toFixed(2)}°C`;
+        }
+        isCelsius = !isCelsius;
+    });
 
 function fetchWeatherByCity(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;

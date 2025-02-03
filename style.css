@@ -54,6 +54,7 @@ body{
     color: #fff;
     font-size: 30px;
     padding-top: 30px;
+    cursor: pointer;
 }
 #condition{
     color: #fff;
@@ -73,6 +74,7 @@ body{
     padding-bottom: 20px;
     font-size: 30px;
 }
+
 .content{
     display: flex;
    justify-content: space-between;
@@ -92,15 +94,7 @@ body{
 #nav-left h2{
     color: #fff;
 }
-/* #wrapper{
-    height: 60vh;
-    width: 60vw;
-    background: rgba(155, 182, 204, 0.6);
-    display: flex;
-    border-radius: 20px;
-   
-    
-} */
+
 #wrapper{
     height:auto;
     width:80vw; 
